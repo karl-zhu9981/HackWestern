@@ -7,10 +7,10 @@ var ctx = document.getElementById("myPieChart");
 var myPieChart = new Chart(ctx, {
   type: 'doughnut',
   data: {
-    labels: ["Direct", "Referral", "Social"],
+    labels: ["Groceries", "Transportation", "Education", "Entertainment", "Health", "Dining Out", "Fees & Utilities", "Other"],
     datasets: [{
-      data: [55, 30, 15],
-      backgroundColor: ['#4e73df', '#1cc88a', '#36b9cc'],
+      data: [55, 30, 15, 60, 20, 25, 90, 50],
+      backgroundColor: ['#4e73df', '#1cc88a', '#36b9cc', "#FFD337", "#FF8080", "#FD4949", "#2B985C", "#2E509E"],
       hoverBackgroundColor: ['#2e59d9', '#17a673', '#2c9faf'],
       hoverBorderColor: "rgba(234, 236, 244, 1)",
     }],
@@ -28,8 +28,9 @@ var myPieChart = new Chart(ctx, {
       caretPadding: 10,
     },
     legend: {
-      display: false
+      display: true,
+      position: 'right'
     },
-    cutoutPercentage: 80,
+    cutoutPercentage: 50,
   },
 });
