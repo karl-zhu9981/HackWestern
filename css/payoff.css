@@ -1,0 +1,6 @@
+.bg-gradient-space {
+  background-color: #26136E;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(10%, #26136E), to(#2346B8));
+  background-image: linear-gradient(180deg, #26136E 10%, #2346B8 100%);
+  background-size: cover;
+}
