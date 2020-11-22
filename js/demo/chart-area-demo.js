@@ -32,9 +32,9 @@ var ctx = document.getElementById("myAreaChart");
 var myLineChart = new Chart(ctx, {
   type: 'line',
   data: {
-    labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+    labels: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"],
     datasets: [{
-      label: "Earnings",
+      label: "Amount repaid",
       lineTension: 0.3,
       backgroundColor: "rgba(78, 115, 223, 0.05)",
       borderColor: "rgba(78, 115, 223, 1)",
@@ -46,7 +46,7 @@ var myLineChart = new Chart(ctx, {
       pointHoverBorderColor: "rgba(78, 115, 223, 1)",
       pointHitRadius: 10,
       pointBorderWidth: 2,
-      data: [0, 10000, 5000, 15000, 10000, 20000, 15000, 25000, 20000, 30000, 25000, 40000],
+      data: [0, 600, 1300, 3000, 3800, 4800, 6800, 7400, 10000, 10500, 14000],
     }],
   },
   options: {
@@ -116,3 +116,25 @@ var myLineChart = new Chart(ctx, {
     }
   }
 });
+
+
+function addData() {
+  myLineChart.data.labels.push("12")
+  myLineChart.data.datasets = []
+  myLineChart.data.datasets.push({
+    label: "Amount repaid",
+      lineTension: 0.3,
+      backgroundColor: "rgba(78, 115, 223, 0.05)",
+      borderColor: "rgba(78, 115, 223, 1)",
+      pointRadius: 3,
+      pointBackgroundColor: "rgba(78, 115, 223, 1)",
+      pointBorderColor: "rgba(78, 115, 223, 1)",
+      pointHoverRadius: 3,
+      pointHoverBackgroundColor: "rgba(78, 115, 223, 1)",
+      pointHoverBorderColor: "rgba(78, 115, 223, 1)",
+      pointHitRadius: 10,
+      pointBorderWidth: 2,
+      data: [0, 600, 1300, 3000, 3800, 4800, 6800, 7400, 10000, 10500, 14000, 14850],
+  });
+  myLineChart.update();
+}
