@@ -179,7 +179,7 @@
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800"><b>Loans Overview</b></h1>
+                        <h1 class="h3 mb-0 text-gray-800"><b>Loans</b></h1>
                         <a href="#" data-toggle="modal" data-target="#addPaymentModal" class="d-none d-sm-inline-block btn btn-sm btn-success shadow-sm">Add Payment</a>
                     </div>
 
@@ -359,20 +359,29 @@
         </div>
     </div>
 
-    <!-- Logout Modal-->
+    <!-- Add Payment Modal-->
     <div class="modal fade" id="addPaymentModal" tabindex="-1" role="dialog" aria-labelledby="addPaymentLabel"
         aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="addPaymentLabel">Add new Loan Payment</h5>
+                    <h5 class="modal-title" id="addPaymentLabel">Add new loan payment</h5>
                     <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">×</span>
                     </button>
                 </div>
                 <div class="modal-body">
                     <p>Confirm your credit card number and type the amount you want to pay.</p>
+                    <hr>
                     <p>Credit Card Number: **** **** **** 4382</p>
+                    <form class="amount">
+                        <div class="form-group">
+                            <label for="amountPaid">Amount:</label>
+                            <input type="number" class="form-control"
+                                id="amountPaid" style="width: 10em;" step="any" 
+                                placeholder="Enter amount">
+                        </div>
+                    </form>
                 </div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>

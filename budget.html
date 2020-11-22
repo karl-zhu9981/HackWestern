@@ -179,7 +179,7 @@
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Budget</h1>
+                        <h1 class="h3 mb-0 text-gray-800"><b>Budget</b></h1>
                         <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
                                 class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
                     </div>
@@ -320,7 +320,7 @@
                                     </span>
                                     <span class="text">Delete</span>
                                 </a>
-                                <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-success shadow-sm">
+                                <a href="#" data-toggle="modal" data-target="#addReceiptModal" class="d-none d-sm-inline-block btn btn-sm btn-success shadow-sm">
                                     <span class="icon text-white-50">
                                         <i class="fas fa-plus"></i>
                                     </span>
@@ -473,6 +473,32 @@
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
                     <a class="btn btn-primary" href="login.html">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Receipt Modal-->
+    <div class="modal fade" id="addReceiptModal" tabindex="-1" role="dialog" aria-labelledby="addReceiptLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addReceiptLabel">Add new receipt</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Upload an image of a receipt.</p>
+                    <hr>
+                    <form class="receipt">
+                        <input type="file" id="myFile" name="filename">
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <a class="btn btn-primary" id="addReceiptButton" href="budget.html">Add</a>
                 </div>
             </div>
         </div>
